@@ -1,0 +1,1 @@
+* Código Manim necesario para video sobre reducción de orden
