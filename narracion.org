@@ -1,0 +1,125 @@
+#+title: Reducción de Orden en Ecuaciones Diferenciales Lineales Homogéneas
+Duración total: 10 minutos
+
+Recursos útiles:
+https://www.mathsisfun.com/calculus/differential-equations-variation-parameters.html
+
+* Descripción general:
+1. Introducción (1 min)
+- Contextualización de las EDOs lineales homogéneas de orden n
+- Importancia de encontrar un conjunto fundamental de soluciones
+- Adelanto del papel crucial del Wronskiano para verificar la independencia lineal
+
+2. Independencia Lineal en EDOs (2.5 min)
+ Concepto Fundamental
+- Definición formal: Un conjunto de funciones {y₁, y₂, ..., yₙ} es linealmente independiente si la ecuación
+  c₁y₁ + c₂y₂ + ... + cₙyₙ = 0
+  implica que c₁ = c₂ = ... = cₙ = 0
+- Interpretación geométrica: Las funciones no pueden obtenerse como combinación de las otras
+
+Importancia en EDOs
+- La independencia lineal garantiza que tenemos suficientes soluciones distintas
+- Permite construir la solución general como y = c₁y₁ + c₂y₂ + ... + cₙyₙ
+- Cada solución independiente aporta un nuevo "grado de libertad"
+
+3. El Wronskiano: Herramienta Fundamental (3 min)
+ Definición y Cálculo
+- El Wronskiano W(y₁, y₂, ..., yₙ) es el determinante:
+
+| y₁ 	y₂ 	...  yₙ 	|
+| y₁'	y₂'	...  yₙ'	|
+| y₁''   y₂''   ...  yₙ''   |
+| ...	...	...  ...	|
+| y₁⁽ⁿ⁻¹⁾ y₂⁽ⁿ⁻¹⁾ ... yₙ⁽ⁿ⁻¹⁾ |
+
+
+ Significado Geométrico
+- El Wronskiano mide el "volumen" n-dimensional generado por las funciones y sus derivadas
+- Un Wronskiano no nulo indica independencia lineal
+- La anulación del Wronskiano en un punto no garantiza dependencia lineal
+- El Wronskiano es constante o idénticamente nulo para EDOs lineales homogéneas
+
+ 4. Ejemplos Prácticos (2 min)
+ Ejemplo 1: EDO de Segundo Orden
+- Ecuación: y'' + y = 0
+- Soluciones candidatas: y₁ = cos(x), y₂ = sin(x)
+
+
+- Cálculo del Wronskiano:
+
+  W = | cos(x)  sin(x) |
+  	|-sin(x)  cos(x) |
+  W = cos²(x) + sin²(x) = 1
+
+- Interpretación: Las soluciones son linealmente independientes en todo punto
+
+ Ejemplo 2: Caso de Dependencia Lineal
+- Soluciones: y₁ = e^x, y₂ = 3e^x
+- Demostración de que el Wronskiano es cero
+- Explicación de por qué estas soluciones no son útiles para formar un conjunto fundamental
+
+ 5. Teorema Fundamental sobre el Wronskiano (1 min)
+- Si W(x₀) ≠ 0 en algún punto x₀, entonces las funciones son linealmente independientes en todo el intervalo
+- La recíproca no es cierta: W ≡ 0 no implica necesariamente dependencia lineal
+- Importancia para verificar conjuntos fundamentales de soluciones
+
+ 6. Conclusión (30 seg)
+- Resumen de la importancia del Wronskiano como herramienta de verificación
+- Conexión entre independencia lineal y la construcción de soluciones generales
+- Énfasis en la interpretación geométrica del Wronskiano
+
+* Guion: Reducción de Orden en EDOs Lineales Homogéneas
+** Escena 1: Introducción
+
+[Aparece título animado]
+
+"Hola, hoy veremos uno de los conceptos más importantes en ecuaciones diferenciales: la reducción de orden en EDOs lineales homogéneas. Este concepto es fundamental para entender cómo encontrar todas las soluciones posibles de una ecuación diferencial.
+
+Cuando trabajamos con ecuaciones diferenciales de orden n, necesitamos encontrar n soluciones independientes para construir la solución general. Pero, ¿cómo sabemos si las soluciones que encontramos son realmente independientes? Aquí es donde entra el Wronskiano."
+
+** Escena 2: Independencia Lineal
+"Antes de hablar del Wronskiano, necesitamos entender qué significa que las funciones sean linealmente independientes.
+
+[Aparece ecuación]
+Matemáticamente, decimos que un conjunto de funciones {y₁, y₂, ..., yₙ} es linealmente independiente si la única forma de obtener cero al combinarlas es usando todos los coeficientes igual a cero.
+
+[Animación mostrando vectores/funciones independientes vs dependientes]
+Geométricamente, esto significa que ninguna de estas funciones puede obtenerse como combinación de las otras. Es como tener vectores que apuntan en direcciones verdaderamente diferentes."
+
+** Escena 3: El Wronskiano
+"El Wronskiano es una herramienta poderosa que nos permite verificar la independencia lineal.
+
+[Aparece determinante del Wronskiano animado]
+Se construye como un determinante que incluye nuestras funciones y todas sus derivadas hasta el orden n-1.
+
+[Animación del 'volumen' generado]
+Lo fascinante es que el Wronskiano mide el 'volumen' n-dimensional generado por nuestras funciones y sus derivadas. Si este volumen es diferente de cero, ¡tenemos independencia lineal!"
+
+** Escena 4: Ejemplos Prácticos
+"Veamos esto en acción con un ejemplo simple.
+
+[Animación de y'' + y = 0]
+Para la ecuación y'' + y = 0, tenemos las soluciones y₁ = cos(x) y y₂ = sin(x).
+
+[Cálculo animado del Wronskiano]
+Al calcular el Wronskiano, obtenemos W = 1, lo que nos confirma que estas soluciones son linealmente independientes.
+
+[Contraste con ejemplo de dependencia]
+En contraste, si tomamos y₁ = e^x y y₂ = 3e^x, el Wronskiano es cero, indicando que estas funciones son dependientes."
+
+** Escena 5: Teorema Fundamental
+"El Teorema Fundamental del Wronskiano nos dice algo crucial:
+
+[Aparece teorema animado]
+Si el Wronskiano es diferente de cero en algún punto, las funciones son linealmente independientes en todo su dominio.
+
+[Nota de precaución]
+Sin embargo, cuidado: un Wronskiano igual a cero no necesariamente significa dependencia lineal."
+
+** Escena 6: Conclusión
+"En resumen, el Wronskiano es nuestra brújula para navegar en el espacio de soluciones de EDOs.
+
+[Recapitulación visual]
+Nos permite verificar la independencia lineal y asegurarnos de que tenemos un conjunto completo de soluciones.
+
+Gracias por su atención."
